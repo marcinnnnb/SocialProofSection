@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+  --font: 'League Spartan', sans-serif;
+  --veryDarkMagenta: hsl(300, 43%, 22%);
+  --softPink: hsl(333, 80%, 67%);
+  --darkGreyishMagenta: hsl(300, 43%, 22%);
+  --lightGrayishMagenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  color: var(--veryDarkMagenta);
+  padding: 6.25rem 8.75rem 1.25rem;
+}
+
+.header__text {
+  width: 40%;
+}
+
+.header__text h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  width: 70%;
+}
+
+.header__text p {
+  line-height: 1.4;
+  width: 85%;
+  margin-top: 1.5rem;
+  color: var(--softPink);
+}
+
+.customer__rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--lightGrayishMagenta);
+  padding: 1.25rem 1.25rem 1.25rem 1.875rem;
+  margin-top: 0.938px;
+  margin-bottom: 0.938px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.customer__stars {
+  margin-right: 2.5rem;
+}
+
+.customer__stars img {
+  margin-right: 0.313rem;
+}
+
+.customer__rating h3 {
+  margin-left: 10px;
+}
+
+.customer__rating.rating__two {
+  margin-left: 50px;
+}
+
+.customer__rating.rating__three {
+  margin-left: 100px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 140px;
+}
+
+.main__card {
+  background-color: var(--veryDarkMagenta);
+  color: var(--white);
+  padding: 40px 30px;
+  width: 375px;
+  line-height: 1.5;
+  border-radius: 10px;
+}
+
+.customer__information {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.customer__information img {
+  border-radius: 50%;
+  width: 25%;
+  height: 25%;
+  margin-right: 20px;
+}
+
+.customer__data-name {
+  font-size: 1.3rem;
+}
+
+.customer__data-info {
+  color: var(--softPink);
+  font-weight: 400;
+}
+
+.customer__data-feedback {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.card__two {
+  margin-top: 40px;
+}
+
+.card__three {
+  margin-top: 80px;
+}
+
+@media only screen and (max-width: 1024px) {
+  header,
+  main {
+    flex-direction: column;
+  }
+
+  .header__text,
+  .header__text h1,
+  .header__text p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .customer__rating {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .customer__rating.rating__two,
+  .customer__rating.rating__three {
+    margin-left: 0;
+  }
+
+  .customer__stars {
+    margin-right: 0px;
+    margin-bottom: 8px;
+  }
+
+  .main__card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .main__card.card__three {
+    margin-top: 40px;
+  }
+}
